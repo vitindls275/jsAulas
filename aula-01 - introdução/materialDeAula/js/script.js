@@ -1,28 +1,44 @@
 console.log("helo word");
 
 // CAIXAS DE TEXTO
-function testLet(params) {
-    
-}
-alert("ola, esse é meu primeiro comando js!")
-confirm("Estou aprendendon js?")
-prompt("qual é o seu nome?")
+// alert('Salve pessoas!');
+// confirm('Estou aprendendo JS?');
+// prompt('Qual é o seu nome?');
 
-// VARIAVEIS
+// VARIÁVEIS
+// LET escopo: local, sobrescrevível
+    function testeLet() {
+        let numero = 10;
+        console.log(numero);
+    }
 
-// LET = escopo local, sobrescrevivel
-let numero = 10
-console.log
+// CONST escopo: global, não sobrescrevível
+    const π = 3.14;
+    console.log(π);
 
-//  CONST = escopo global, não sobrescrevivel
+// VAR escopo: global, sobrescrevível
+    var nome = 'Victor';
+    console.log(nome);
 
+    var idade = prompt("Qual é a sua idade?");
+// CONCATENAÇÂO
 
+// PRIMEIRA MANEIRA +
+// SEGUNDA MANEIRA ${}
 
-// vVAR escopo global, sobrescrevivel
+//  alert(nome + ', Seja bem vindo!');
+    alert(`Seja bem vindoa! ${nome}`);
 
-var nome = "Victor"
-console.log()
+// TIPOS DE VALORES
+// NUMBER números
+var real = 180;
 
-var idade = pronpt ("qualé a sua idade")
-alert(nome + "seja bem vindo")
- 
+// STRING
+var texto = 'EXEMPLO';
+
+// BOOLEAN logicos ou verdadeiro e falso
+var ligado = true;
+var desligado = false;
+
+// OBJECT objeto
+var carro = [];
