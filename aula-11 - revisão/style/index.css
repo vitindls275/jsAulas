@@ -1,0 +1,17 @@
+
+#progressBar,#progress{
+    height: 4px !important;
+}
+
+#progressBar{
+    background-color: whitesmoke;
+}
+
+#progress{
+    background-color: rgb(80, 80, 80);
+}
+
+aside{
+    background-color: rgb(24, 24, 24);
+    gap: 2px !important;
+}

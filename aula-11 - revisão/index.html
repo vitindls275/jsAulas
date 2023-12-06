@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Revisão - Spotify</title>
+        <link rel="shortcut icon" href="images/Logo/Spotify_logo_without_text.svg" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/index.css">
+    </head>
+    <body>
+        <div id="root" class="container-fluid m-0 p-1 bg-black vh-100 ">
+            <div id="root" class="container-fluid bg-black m-0 p-0 vh-100">
+                <header style="height: 3%;" class="container-fluid m-0 d-flex justify-content-between p-0">
+                    <!-- more -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="whitesmoke" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                    </svg>
+                    <div id="ladoDireitoHeader">
+                        <!-- dash -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="whitesmoke" class="bi bi-dash" viewBox="0 0 16 16">
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                        </svg>
+                        <!-- window stack -->
+                        <svg width="30px" height="30px" viewBox="0 0 16.00 16.00" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g color="#000000" font-weight="400" font-family="sans-serif" white-space="normal" fill="whitesmoke"> <path d="M4 6v6h6V6zm1 1h4v4H5z" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" overflow="visible"></path> <path d="M6 4v1h5v5h1V4z" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" overflow="visible" opacity=".5"></path> </g> </g></svg>
+                        <!-- cancel -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="whitesmoke" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </div>         
+                </header>
+
+            <main class="container-fluid m-0 p-0 row " style="height: 87%;">
+                <aside class="container-fluid m-1 p-1 col-2 rounded" ></aside>
+                <aside class="container-fluid m-1 p-1 col-9 rounded">
+                    <section id="conteudoPrincipal" class="container-fluid text-white">
+                        <h3>Tocados recentemente</h3>
+                        <div class="musicasLista d-flex">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#MatueModal">
+                                <div class="card bg-dark p-1 text-white" style="width: 16rem; ">
+                                    <img src="images/Musics/matue.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title">Matue</h5>
+                                    <p class="card-text">Gorila roxo</p>
+                                    
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </section>
+                </aside>
+
+            </main>
+
+            <footer class="container-fluid p-0 m-0 row bg-black" style="height: 10%;">
+                <div id="MusicaInfo"></div>
+                <!-- PROGRESSO MUSICA -->
+                <div class="container col-5" id="MusicaProgresso">
+                    <div id="controlesMusica" class="d-flex justify-content-center">
+                        <button type="button" class="btn" id="btnPlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="whitesmoke" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="progressoMusicaInfo">
+                        <div id="progress" class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MUSICA OPCOES -->
+                <div id="MusicaOpcoes"></div>
+            </footer>
+        </div>
+
+        <!-- MODAL -->
+        <!-- modal Matue -->
+        <div class="modal fade" id="MatueModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.7.1.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,57 +1,34 @@
-var num1 = Number(prompt('Digite seu primeiro número: '));
-var operador = String(prompt('Digite a operação matemática: '));
-var num2 = Number(prompt('Digite seu segundo número: '));
-var resultado;
+//OPERADORES LOGICOS
+// > MAIOR QUE
+// < MENOR QUE
+// == IGUAL (= ATRIBUI,== COMPARA VALOR,=== COMPARA VALOR E TIPO)
+// >= MAIOR OU IGUAL QUE
+// <= MENOR OU IGUAL QUE
+// != DIFERENTE 
 
-function calularNovamente() {
-    let novoCalculo = confirm('Deseja fazer um novo cálculo?');
+// ALTERNÁRIOS
+// && E (EXIGE DUAS CONDIÇÕES VERDADEIRAS)
+// || OU (EXIGE APENAS UMA VERDADEIRA)
+// ! NÃO 
 
-    if (novoCalculo == true) {
-        location.reload();
-    } else {
-        alert('Operação cancelada!')
-    }
+// SE (CONDIÇÃO) ENTAO
+//  FAZ ALGO
+// SENAO
+// FAZ OUTRA COISA
+// FIMSE 
+
+if(false){
+    console.log("Sou verdadeiro :)");
+}else{
+    console.log("Sou falso :(");
 }
 
-switch (operador) {
-    case '+': 
-        resultado = num1 + num2;
-        alert(`O resulto é: ${resultado}`);
-        calularNovamente()
-        break;
-    case '-': 
-        resultado = num1 - num2;
-        alert(`O resulto é: ${resultado}`);
-        calularNovamente()
-        break;
-    case '*': 
-        resultado = num1 * num2;
-        alert(`O resulto é: ${resultado}`);
-        calularNovamente()
-        break;
-        case '/': 
-            if (num2 === 0) {
-                alert('Impossível fazer operação: divisão por 0');
-                location.reload();
-                break;
-            } else {
-                resultado = num1 / num2;
-                alert(`O resulto é: ${resultado}`);
-                calularNovamente()
-                break;
-            }
-    case '%': 
-        resultado = num1 % num2;
-        alert(`O resulto é: ${resultado}`);
-        calularNovamente()
-        break;
-    case '**': 
-        resultado = num1 ** num2;
-        alert(`O resulto é: ${resultado}`);
-        calularNovamente()
-        break;
-    default:
-        alert('Operação inválida!');
-        location.reload();
-        break;
+// MAIOR DE IDADE
+var idade = Number(prompt("Qual é a sua idade?"));
+
+if(idade >= 18){
+    alert("Seja bem vindo ao website!");
+}else{
+    alert("Você não tem autorização neste website!");
+    location.href = "https://www.google.com/";
 }
