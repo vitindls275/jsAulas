@@ -1,4 +1,4 @@
-*{
+ *{
     margin: 0%;
     padding: 0%;
 }
@@ -12,6 +12,38 @@
     background-color: rgb(59, 3, 97)
 }
 
+
+
+#root, #divText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, span {
+    color: whitesmoke;
+}
+
+span {
+    background-color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 20pt;
+    transition: .2s;
+}
+
+span:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+#divText {
+    width: 100%;
+    padding: 1rem 0;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 #inputText{
     width: 290px;
     height: 40px;
@@ -19,18 +51,4 @@
     border: none;
     padding: 0 10px;
     background-color: rgba(174, 176, 179, 0.733);
-}
-
-::placeholder{
-    color: black;
-}
-
-#formGrup{
-    display: flex;
-    flex-direction: column;
-}
-
-span{
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
 }
