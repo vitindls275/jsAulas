@@ -1,20 +1,18 @@
-var bntTema = $('#bntTema');
-var body = $('body');
+var verificarPromise = new Promise((resolve, reject) => {
+  let nome = 'ADM';
+  let senha = 'ADa';
 
-bntTema.on('click', function(){
-    if(bntTema.hasClass("temaClaro")){
-        bntTema.removeClass("temaClaro")
-        bntTema.addClass("temaEscuro")
-        bntTema.text("Tema atual: Dark");
+  if (nome == 'ADM' && senha == 'ADM') {
+      resolve('Boas-vindas, adm!');
+  } else {
+      reject('Nome e/ou senha incorretos! Motivo: não é o adm! Faça login de maneira alternativa!');
+  }
+});
 
-        body.removeClass("temaClaro")
-        body.addClass("temaEscuro")
-    }else{
-        bntTema.removeClass("temaEscuro")
-        bntTema.addClass("temaClaro")
-        bntTema.text("Tema atual: Light");
+verificarPromise.then((x) => {
+  console.log(x);
+});
 
-        body.removeClass("temaEscuro")
-        body.addClass("temaClaro")
-    }
-})
+verificarPromise.catch((x) => {
+  console.log(x);
+});

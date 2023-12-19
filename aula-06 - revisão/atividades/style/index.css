@@ -1,0 +1,153 @@
+@keyframes spinner-border {
+  to { 
+      transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --branco: rgb(192, 192, 192);
+  --branco-escuro: rgb(185, 171, 171);
+  --cinza: rgb(78, 78, 78);
+  --cinza-claro: #777777;
+  --verde: rgb(138, 240, 138);
+}
+
+#root, header, main, .inputs, footer {
+  width: 100%;
+}
+
+#root {
+  padding: 2rem 0;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--branco);
+}
+
+section, #root, form, .inputs, footer, main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 70%;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 20px;
+  background-color: var(--cinza);
+}
+
+header {
+  text-align: center;
+}
+
+h1, h2, h3, label {
+  color: var(--verde);
+}
+
+p {
+  color: var(--cinza-claro);
+}
+
+main {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form {
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputs {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.labels {
+  width: 80%;
+}
+
+label {
+  text-align: start;
+}
+
+input, select {
+  width: 80%;
+  height: 30px;
+  padding-left: 3px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12pt;
+  color: var(--cinza);
+  background-color: var(--branco);
+}
+
+textarea {
+  width: 80%;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 11pt;
+  resize: none;
+  background-color: var(--branco);
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: var(--cinza);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  height: 10px;
+  background: var(--verde);
+}
+
+
+input:focus, textarea:focus, select:focus {
+  color: var(--cinza);
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder, select{
+  color: var(--cinza-claro);
+}
+
+footer {
+  gap: 1rem;
+}
+
+#filmeBtn, #listarBtn {
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  color: var(--cinza);
+  background-color: var(--branco);
+  transition: .5s;
+}
+
+#filmeBtn:hover, #listarBtn:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 6px var(--branco);
+  background-color: var(--verde);
+}
+
+.sucesso {
+  color: var(--verde);
+}
+
+.fracasso {
+  color: rgb(255, 101, 101);
+}
